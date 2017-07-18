@@ -26,7 +26,10 @@ inner = -(y.*first + (1-y) .* second);
 total = sum(inner);
 J = (1/m)*total;
 
-
+%gradient
+first = sigmoid(X*theta)-y;
+total = X' * first; 
+grad = (1/m) * total;
 
 
 
